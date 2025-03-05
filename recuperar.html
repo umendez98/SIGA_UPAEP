@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - SIGA UPAEP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <a href="index.html" class="back-btn">&larr;</a>
+            <h1 class="logo">SIGA <span>UPAEP</span></h1>
+            <p class="login-text">Recuperar contraseña</p>
+            
+            <form id="recover-form">
+                <label for="id">Ingresa tu ID</label>
+                <input type="text" id="id" placeholder="ID" required>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+
+            <p id="success-message" class="success-message" style="display: none;">
+                Se ha restablecido la contraseña. <br> Contacta al administrador.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('recover-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('recover-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
