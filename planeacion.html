@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeación Académica</title>
+    <link rel="stylesheet" href="CSS/planeacion.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">SIGA <span>UPAEP</span></div>
+        <ul>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li class="active"><a href="planeacion.html">Planeación Académica</a></li>
+            <li><a href="materias.html">Materias y Programas</a></li>
+            <li><a href="estudiantes.html">Estudiantes</a></li>
+            <li><a href="gestion_usuarios.html">Gestión de Usuarios</a></li>
+        </ul>
+        <div class="logout">
+            <a href="login.html">Salir</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Planeación Académica</h1>
+
+        <div class="filters">
+            <select id="programa">
+                <option>Programa</option>
+                <option>Ing. de Software</option>
+                <option>Ing. en Computación</option>
+                <option>Ing. en Ciencia de Datos</option>
+            </select>
+            <select id="plan">
+                <option>Plan</option>
+                <option>Plan 01</option>
+                <option>Plan 02</option>
+                <option>Plan 03</option>
+            </select>
+            <select id="periodo">
+                <option>Periodo</option>
+                <option>Otoño 2024</option>
+                <option>Primavera 2024</option>
+                <option>Otoño 2023</option>
+            </select>
+        </div>
+
+        <div class="report-section">
+            <h2>Reportes</h2>
+            <button class="btn" id="btnCupos">Cupos</button>
+            <button class="btn" id="btnEstadisticas">Estadísticas</button>
+
+            <div id="contenedorCupos" class="hidden">
+                <h3>Cupos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Clave</th>
+                            <th>Módulo</th>
+                            <th>Asignatura</th>
+                            <th>Cupos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>MAT111</td><td>1</td><td>Cálculo Diferencial</td><td>40</td></tr>
+                        <tr><td>TDC007</td><td>3</td><td>Base de Datos</td><td>60</td></tr>
+                        <tr><td>ISW226</td><td>4</td><td>Ingeniería de Usabilidad</td><td>30</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="contenedorEstadisticas" class="hidden">
+                <h3>Estadísticas</h3>
+                <canvas id="chartCupos"></canvas>
+                <canvas id="chartReprobados"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="JavaScript/planeacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

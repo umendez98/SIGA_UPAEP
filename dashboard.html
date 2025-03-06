@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - SIGA UPAEP</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SIGA UPAEP</title>
+    <link rel="stylesheet" href="CSS/dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="dashboard-body">
+<body>
 
     <div class="sidebar">
         <h2 class="logo">SIGA <span>UPAEP</span></h2>
         <ul>
             <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#">Planeación Académica</a></li>
+            <li><a href="planeacion.html">Planeación Académica</a></li>
             <li><a href="#">Materias y Programas</a></li>
             <li><a href="#">Estudiantes</a></li>
             <li><a href="#">Gestión de Usuarios</a></li>
         </ul>
         <div class="logout">
-            <a href="#">Salir</a>
+            <a href="login.html">Salir</a>
         </div>
     </div>
 
@@ -59,29 +58,8 @@
 
     </div>
 
-    <script>
-        // Gráficos de líneas usando Chart.js
-        function renderChart(chartId, value) {
-            new Chart(document.getElementById(chartId), {
-                type: 'line',
-                data: {
-                    labels: ["Enero", "Feb", "Mar", "Abr", "May"],
-                    datasets: [{
-                        label: "Tendencia",
-                        data: [2, 5, 3, 6, value],
-                        borderColor: "#E10023",
-                        borderWidth: 2,
-                        fill: false
-                    }]
-                },
-                options: { responsive: true, legend: { display: false } }
-            });
-        }
-
-        renderChart("chart1", 3);
-        renderChart("chart2", 11);
-        renderChart("chart3", 86);
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="JavaScript/dashboard.js"></script>
 
 </body>
 </html>
